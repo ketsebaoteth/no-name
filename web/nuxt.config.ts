@@ -12,6 +12,15 @@ export default defineNuxtConfig({
   tailwindcss: {
     exposeConfig: true,
     viewer: true,
+    config: {
+      theme: {
+        extend: {
+          backgroundColor: {
+            primary: "var(--primary-background)",
+          },
+        }
+      }
+    }
     // and more...
   }
 })

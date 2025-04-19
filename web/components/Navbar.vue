@@ -1,52 +1,57 @@
 <script lang="ts" setup>
 import { navConfig } from "@config/ui/navbar.config"
 import { projConfig } from "@config/project/project.config"
+import ThemeToggle from "./ThemeToggle.vue";
 </script>
 <template>
-  <div class="navbar">
-    <div class="project">
-      <img src="~/assets/nuxt-green.svg" alt="">
-      <h1 class="projectTitle">
-        {{navConfig.title}}
-      </h1>
-      <div class="ProjectVersion">
-        <span>v{{projConfig.version}}</span>
-      </div>
-    </div>
-    <div class="links">
-      <div class="link" v-for="(link, index) in navConfig.links" :key="index">
-        <NuxtLink :to="link.path" class="text-white hover:text-gray-300">
-          {{ link.label }}
-        </NuxtLink>
-      </div>
-    </div>
-    <div class="functionality flex place-items-center h-full">
-      <div class="search flex place-items-center" v-if="navConfig.searchEnabled">
-        <icon name="tabler:search" class="size-4 text-gray-300" />
-      </div>
+    <div class="navbar">
+      <div class="project">
+        <img src="~/assets/nuxt-green.svg" alt="">
+        <div class="flex place-items-center gap-1">
+          <h1 class="projectTitle">
+            {{navConfig.title}}
+          </h1>
+          <div class="ProjectVersion">
+            <span>v{{projConfig.version}}</span>
+          </div>
+        </div>
+       
 
+      </div>
+      <div class="links">
+        <div class="link" v-for="(link, index) in navConfig.links" :key="index">
+          <NuxtLink :to="link.path" class="text-white hover:text-gray-300">
+            {{ link.label }}
+          </NuxtLink>
+        </div>
+      </div>
+      <div class="functionality flex place-items-center h-full">
+        <NavSearchSmall />
+        <ThemeToggle />
+      </div>
     </div>
-  </div>
 </template>
 
 <style scoped lang="scss">
-
 .navbar{
-  @apply w-screen h-12 bg-gray-800 text-white flex items-center gap-5 px-5 text-sm;
+  @apply w-full bg-primary py-5 border-b border-[var(--border-color)] flex items-center gap-6 px-8 text-sm;
   .project{
-    @apply flex place-items-center gap-1;
+    @apply flex place-items-center gap-2;
     .ProjectVersion{
-      @apply text-[9px] ml-1 rounded-sm px-1 h-5 flex place-items-center border border-[var(--primary-color)] bg-[var(--primary-transparent)];
+      @apply text-[9px] ml-1 rounded-sm px-[5px] h-[18px] flex place-items-center border border-[var(--border-color)] bg-[var(--primary-transparent)];
+      span{
+        @apply tracking-wider;
+      }
     }
     h1{
-      @apply h-full flex place-items-center;
+      @apply h-full flex place-items-center text-lg;
     }
     img{
-      @apply h-full w-7;
+      @apply size-8;
     }
   }
   .links{
-    @apply flex gap-5 ml-auto;
+    @apply flex gap-7 ml-auto;
     .link{
       @apply h-full flex place-items-center cursor-pointer text-xs;
       &:hover{

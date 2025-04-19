@@ -1,9 +1,14 @@
 * {
-  font-family: "Inter", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  @apply text-white;
 }
 
 :root {
-  --primary-color: #004237;
+  --primary-color: #00df8a;
+  --primary-background: #080808;
+  --border-color: #2e2e2e;
   --primary-transparent: #001c23;
   --secondary-color: #8aa2b4;
   --accent-color: #fbbf24;
@@ -12,4 +17,8 @@
   --text-light-color: #6b7280;
   --border-radius: 0.375rem;
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background-color: var(--primary-background);
 }/*# sourceMappingURL=global.css.map */
