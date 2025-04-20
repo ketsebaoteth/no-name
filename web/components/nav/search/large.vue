@@ -21,7 +21,7 @@
   .input-container{
     @apply flex place-items-center gap-2;
     input{
-      @apply bg-transparent border-none outline-none text-sm text-white placeholder:text-gray-400;
+      @apply bg-transparent border-none outline-none text-xs text-white placeholder:text-gray-400;
       &::placeholder{
         @apply text-gray-400;
       }

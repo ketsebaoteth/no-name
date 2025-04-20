@@ -21,4 +21,5 @@
 
 body {
   background-color: var(--primary-background);
+  overflow-x: hidden;
 }/*# sourceMappingURL=global.css.map */

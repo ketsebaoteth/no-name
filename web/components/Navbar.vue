@@ -36,7 +36,7 @@ import ThemeToggle from "./ThemeToggle.vue";
 
 <style scoped lang="scss">
 .navbar{
-  @apply w-full bg-primary py-3 border-b border-[var(--border-color)] flex items-center gap-6 px-8 text-sm;
+  @apply w-full bg-transparent py-3 border-b border-[var(--border-color)] flex items-center gap-6 px-8 text-sm;
   .project{
     @apply flex place-items-center gap-2;
     .ProjectVersion{
