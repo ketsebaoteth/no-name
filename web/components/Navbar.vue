@@ -18,6 +18,9 @@ import ThemeToggle from "./ThemeToggle.vue";
        
 
       </div>
+      <!-- <NavSearchSmall class="ml-auto" /> -->
+      <NavSearchLarge class="md:flex ml-auto" />
+
       <div class="links">
         <div class="link" v-for="(link, index) in navConfig.links" :key="index">
           <NuxtLink :to="link.path" class="text-white hover:text-gray-300">
@@ -26,7 +29,6 @@ import ThemeToggle from "./ThemeToggle.vue";
         </div>
       </div>
       <div class="functionality flex place-items-center h-full">
-        <NavSearchSmall />
         <ThemeToggle />
       </div>
     </div>
@@ -34,7 +36,7 @@ import ThemeToggle from "./ThemeToggle.vue";
 
 <style scoped lang="scss">
 .navbar{
-  @apply w-full bg-primary py-5 border-b border-[var(--border-color)] flex items-center gap-6 px-8 text-sm;
+  @apply w-full bg-primary py-3 border-b border-[var(--border-color)] flex items-center gap-6 px-8 text-sm;
   .project{
     @apply flex place-items-center gap-2;
     .ProjectVersion{
@@ -51,7 +53,7 @@ import ThemeToggle from "./ThemeToggle.vue";
     }
   }
   .links{
-    @apply flex gap-7 ml-auto;
+    @apply flex gap-7 ;
     .link{
       @apply h-full flex place-items-center cursor-pointer text-xs;
       &:hover{

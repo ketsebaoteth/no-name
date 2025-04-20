@@ -2,6 +2,15 @@
   <div class="flex flex-col w-full h-full">
     <div class="hero">
       <div class="left">
+        <div class="release flex place-items-center gap-1 p-1 py-0.5 w-fit pr-4 border border-[--border-color] rounded-full">
+          <div class="icon bg-[--primary-color] w-fit px-2 py-1 text-xs rounded-full flex place-items-center justify-center">
+            <span>
+              New
+            </span>
+          </div>
+          <span class="text-xs text-white">1.0.0 is out check it out 🎉</span>
+          <Icon name="i-mdi:chevron-right" class="w-4 h-4 text-white cursor-pointer"/>
+        </div>
         <h1>Better Docs Starter</h1>
         <p class="text-2xl">A better documentation site for your project</p>
         <div class="actions flex gap-2">
@@ -33,7 +42,7 @@
       .actions{
         @apply mt-2;
         .btn{
-          @apply text-xs p-2 px-3 rounded flex place-items-center justify-center;
+          @apply text-xs p-[6px] px-3 rounded flex place-items-center justify-center;
         }
       }
     }

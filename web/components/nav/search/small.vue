@@ -6,7 +6,7 @@
 
 <style scoped lang="scss">
 .small-search {
-  @apply flex place-items-center h-full border border-[--border-color] hover:bg-[--border-color] rounded-md p-[6px];
+  @apply flex place-items-center cursor-pointer hover:bg-[--border-color] rounded-md p-[6px];
   .icon{
     @apply size-[15px];
   }
